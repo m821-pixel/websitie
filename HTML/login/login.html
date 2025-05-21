@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explorer pass</title>
+    <link rel="stylesheet" href="../styles/login.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="universal-body">
+    <img src="../images/rocket.png" class="rocket" alt="rocket" />
+    <img src="../images/satellite.png" class="satellite" alt="rocket" />
+    <img src="../images/UFO.png" class="UFO" alt="UFO" />
+
+
+    <div class="login-container">
+      <h1>Welcome, bday boy&lt;3</h1>
+      <h2>Enter star-word🔒</h2>
+      <p>Hint: Twinkle Twinkle little -</p>
+      <input type="password" id="password" placeholder="Guess..." />
+      <button onclick="checkPassword()">Enter</button>
+    </div>
+    
+
+    <script>
+      function checkPassword() {
+        const correctPassword = "Irawo"; 
+        const input = document.getElementById("password").value;
+        if (input === correctPassword) {
+          window.location.href = "../intro.html";
+        } else {
+          alert("Nope 🚫 Think harder!");
+        }
+      }
+    </script>
+  </body>
+</html>

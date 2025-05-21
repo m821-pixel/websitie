@@ -1,0 +1,226 @@
+.planet-body {
+  background-color: #10093a;
+  color: white;
+  font-family: 'Silkscreen', sans-serif;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding: 30px;
+}
+.planet-body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(white 1.2px, transparent 1px);
+  background-size: 30px 30px;
+  animation: twinkle 6s infinite alternate;
+  opacity: 0.3;
+  pointer-events: auto;
+  z-index: 0;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.3; }
+  100% { opacity: 0.6; }
+}
+
+.solar-body {
+  background-color: #10093a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Silkscreen", sans-serif;
+  position: relative;
+}
+
+.solar-body::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(white 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: twinkle 6s infinite alternate;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
+}
+img {
+  position: absolute;
+  top: auto;
+  transform: none;
+  pointer-events: auto;
+}
+
+.sun {
+  position: absolute;
+  top: 50%;
+  left: 145px;
+  transform: translateY(-50%);
+  width: 250px;
+  z-index: 2;
+  filter: drop-shadow(0 0 50px #ffd700);
+  transition: filter 0.3s ease;
+  cursor: pointer;
+}
+
+.solar-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  padding: 0 40px;
+  position: relative;
+}
+
+
+.orbit:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  transition: border-color 0.3s ease;
+}
+
+
+
+.orbit1 { width: 350px; height: 350px; }
+.orbit2 { width: 600px; height: 600px; }
+.orbit3 { width: 850px; height: 850px; }
+.orbit4 { width: 1100px; height: 1100px; }
+.orbit5 { width: 1350px; height: 1350px; }
+.orbit6 { width: 1600px; height: 1600px; }
+.orbit7 { width: 1950px; height: 1950px; }
+.orbit8 { width: 2200px; height: 2200px; }
+
+.planet {
+  position: relative;
+  width: 20px; /* Adjust if needed */
+  height: auto;
+  transform: none;
+}
+
+.mercury {   
+  position: absolute;
+  top: 10%;
+  left: -40px;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 100px;
+  cursor: pointer;
+  pointer-events: auto;
+ }
+.venus {   top: 0%;
+  left: -20px;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 150px;}
+.earth { 
+  top: 0%;
+  left: -10px;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 115px; }
+.mars {
+  bottom: 0%;
+  left: 0px;
+  transform: translateY(-50%);
+  z-index: 2;
+   width: 125px; }
+.jupiter {   top: 45%;
+  left: 10px;
+  transform: translateY(-50%);
+  z-index: 2;
+   width: 220px; }
+.saturn { 
+  top: 30%;
+  left: 10px;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 145px; }
+.uranus { 
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 175px; }
+.neptune { 
+  top: 60%;
+  left: 20px;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 170px; }
+
+
+
+.solar-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(white 1.2px, transparent 1px);
+  background-size: 30px 30px;
+  animation: twinkle 4s infinite alternate;
+  opacity: 0.3;
+  pointer-events: auto;
+  z-index: 0;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.3; }
+  100% { opacity: 0.6; }
+}
+
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 0;
+}
+
+.stars::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  box-shadow: 
+    100px 100px white, 200px 200px white, 300px 300px white, 
+    400px 400px white, 500px 500px white, 600px 600px white;
+  animation: twinkle 2s infinite ease-in-out alternate;
+}
+
+.orbit {
+  position: absolute;
+  top: 80%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none; /* Prevent orbit circle from blocking clicks */
+}
+
+.planet-link {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  pointer-events: auto;
+}
+
+.planet {
+  cursor: pointer;
+  pointer-events: auto;
+}
